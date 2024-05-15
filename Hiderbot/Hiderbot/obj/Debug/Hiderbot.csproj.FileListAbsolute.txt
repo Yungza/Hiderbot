@@ -1,0 +1,11 @@
+C:\Users\cerma\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.csproj.AssemblyReference.cache
+C:\Users\cerma\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.Form1.resources
+C:\Users\cerma\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.Properties.Resources.resources
+C:\Users\cerma\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.csproj.GenerateResource.cache
+C:\Users\cerma\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.csproj.CoreCompileInputs.cache
+C:\Users\cerma\Hiderbot\Hiderbot\Hiderbot\bin\Debug\Hiderbot.exe.config
+C:\Users\cerma\Hiderbot\Hiderbot\Hiderbot\bin\Debug\Hiderbot.exe
+C:\Users\cerma\Hiderbot\Hiderbot\Hiderbot\bin\Debug\Hiderbot.pdb
+C:\Users\cerma\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.Form2.resources
+C:\Users\cerma\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.exe
+C:\Users\cerma\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.pdb
