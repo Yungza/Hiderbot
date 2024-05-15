@@ -59,15 +59,5 @@ namespace Hiderbot.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to John,Black,Math,PE
-        ///Kate,White,English,Art.
-        /// </summary>
-        internal static string Teachers {
-            get {
-                return ResourceManager.GetString("Teachers", resourceCulture);
-            }
-        }
     }
 }
