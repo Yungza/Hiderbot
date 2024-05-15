@@ -10,12 +10,12 @@ namespace Hiderbot
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-        public List<Subjects> Subjects { get; set; }
-        public Teacher(string name, string surname, List<Subjects> subjects)
+        public Timetable Timetable { get; set; }
+        public Teacher(string name, string surname, Timetable timeTable)
         {
             Name = name;
             Surname = surname;
-            Subjects = subjects;
+            Timetable = timeTable;
         }
     }
 }
