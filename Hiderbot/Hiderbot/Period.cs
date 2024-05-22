@@ -9,7 +9,7 @@ namespace Hiderbot
     internal class Period
     {
         public Teacher Teacher { get; set; }
-        public Subjects Subjects { get; set; }
+        public string Subject { get; set; }
 
     }
 }

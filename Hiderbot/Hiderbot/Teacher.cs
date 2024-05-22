@@ -11,6 +11,7 @@ namespace Hiderbot
         public string Name { get; set; }
         public string Surname { get; set; }
         public Timetable Timetable { get; set; }
+        public string Subject { get; set; }
         public Teacher(string name, string surname, Timetable timeTable)
         {
             Name = name;
