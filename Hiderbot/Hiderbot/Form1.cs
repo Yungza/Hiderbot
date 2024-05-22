@@ -17,21 +17,8 @@ namespace Hiderbot
         public Form1()
         {
             InitializeComponent();
-            LoadTeachers();
             Console.ReadKey();
         }
-        void LoadTeachers()
-        {
-            string content = Resources.Teachers;
-            using (StreamReader reader = new StreamReader(content))
-            {
-                string line = reader.ReadLine();
-                string[] things = line.Split(',');
-                foreach (string thing in things)
-                {
-                    Console.WriteLine(thing);
-                }
-            }
-        }
+        
     }
 }
