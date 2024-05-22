@@ -19,5 +19,9 @@ namespace Hiderbot
             InitializeComponent();
             Console.ReadKey();
         }
+<<<<<<< HEAD
+=======
+        
+>>>>>>> f4afef68d29dfa773e7b0181d01831af690a33c2
     }
 }
