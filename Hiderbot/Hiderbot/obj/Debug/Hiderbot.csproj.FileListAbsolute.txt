@@ -18,3 +18,4 @@ C:\Users\cerma\hiderbot3\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.pdb
 C:\Users\cerma\hiderbot3\Hiderbot\Hiderbot\Hiderbot\bin\Debug\Hiderbot.exe.config
 C:\Users\cerma\hiderbot3\Hiderbot\Hiderbot\Hiderbot\bin\Debug\Hiderbot.exe
 C:\Users\cerma\hiderbot3\Hiderbot\Hiderbot\Hiderbot\bin\Debug\Hiderbot.pdb
+C:\PROGRAMOVÁNÍ\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.NewTeacher.resources

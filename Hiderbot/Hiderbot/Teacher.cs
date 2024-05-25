@@ -6,17 +6,22 @@ using System.Threading.Tasks;
 
 namespace Hiderbot
 {
-    internal class Teacher
+    public class Teacher
     {
         public string Name { get; set; }
-        public string Surname { get; set; }
-        public Timetable Timetable { get; set; }
-        public string Subject { get; set; }
-        public Teacher(string name, string surname, Timetable timeTable)
+        public List<string> Subjects { get; set; }
+        public Teacher(string name, List<string> subjects)
         {
             Name = name;
-            Surname = surname;
-            Timetable = timeTable;
+            Subjects = subjects;
+        }
+    }
+    public static class TeachersList // list of Teachers
+    {
+        public static List<Teacher> teachersList = new List<Teacher>();
+        public static void AddTeacher(Teacher newTeacher) 
+        {
+            teachersList.Add(newTeacher);
         }
     }
 }

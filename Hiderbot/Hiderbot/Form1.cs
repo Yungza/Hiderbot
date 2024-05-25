@@ -14,14 +14,32 @@ namespace Hiderbot
 {
     public partial class Form1 : Form
     {
+        List <Teacher> teachers = new List <Teacher> ();
         public Form1()
         {
             InitializeComponent();
-            Console.ReadKey();
         }
-<<<<<<< HEAD
-=======
-        
->>>>>>> f4afef68d29dfa773e7b0181d01831af690a33c2
+
+        private void button_CreateTeacher_Click(object sender, EventArgs e)
+        {
+            NewTeacher newTeacher = new NewTeacher();
+            newTeacher.Show();
+        }
+
+        private void button_TeacherList_Click(object sender, EventArgs e)
+        {
+            string list = "";
+            foreach (Teacher teacher in TeachersList.teachersList)
+            {
+                list += teacher.Name + ": " + teacher.Subjects[0];
+                if (teacher.Subjects[1] != null && teacher.Subjects[1] != "")
+                {
+                    list += ", " + teacher.Subjects[1];
+                }
+                list += "\n";
+                
+            }
+            MessageBox.Show(list);
+        }
     }
 }
