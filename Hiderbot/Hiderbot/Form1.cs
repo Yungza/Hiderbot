@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Hiderbot.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +21,7 @@ namespace Hiderbot
 {
     public partial class Form1 : Form
     {
+<<<<<<< HEAD
         public List<Teacher> teachers;
         public List<string> subjects;
         public List<System.Windows.Forms.ComboBox> comboBoxes;
@@ -27,11 +30,15 @@ namespace Hiderbot
             public static string SelectedTeacher { get; set; }
             public static string SelectedSubject { get; set; }
         }
+=======
+        List <Teacher> teachers = new List <Teacher> ();
+>>>>>>> f7480c18cd9477dd52adf46c31b9e4c97668ebbc
         public Form1()
         {
             InitializeComponent();
             Data data = new Data();
 
+<<<<<<< HEAD
             teachers = data.teachers;
             subjects = data.subjects;
 
@@ -224,6 +231,36 @@ namespace Hiderbot
         private void comboBox36_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+=======
+            Algorithm algorithm = new Algorithm();
+
+            List<List<string>> subjects = algorithm.Generator(data.teachers, data.classes);
+
+            algorithm.Print(subjects, data.classes);
+
+        }
+
+        private void button_CreateTeacher_Click(object sender, EventArgs e)
+        {
+            NewTeacher newTeacher = new NewTeacher();
+            newTeacher.Show();
+        }
+
+        private void button_TeacherList_Click(object sender, EventArgs e)
+        {
+            string list = "";
+            foreach (Teacher teacher in TeachersList.teachersList)
+            {
+                list += teacher.Name + ": " + teacher.Subjects[0];
+                if (teacher.Subjects[1] != null && teacher.Subjects[1] != "")
+                {
+                    list += ", " + teacher.Subjects[1];
+                }
+                list += "\n";
+                
+            }
+            MessageBox.Show(list);
+>>>>>>> f7480c18cd9477dd52adf46c31b9e4c97668ebbc
         }
     }
 }

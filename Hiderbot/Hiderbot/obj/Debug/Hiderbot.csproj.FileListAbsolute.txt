@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\cerma\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.csproj.AssemblyReference.cache
 C:\Users\cerma\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.Form1.resources
 C:\Users\cerma\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.Properties.Resources.resources
@@ -9,3 +10,26 @@ C:\Users\cerma\Hiderbot\Hiderbot\Hiderbot\bin\Debug\Hiderbot.pdb
 C:\Users\cerma\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.Form2.resources
 C:\Users\cerma\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.exe
 C:\Users\cerma\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.pdb
+=======
+C:\PROGRAMOVÁNÍ\Hiderbot\Hiderbot\Hiderbot\bin\Debug\Hiderbot.exe.config
+C:\PROGRAMOVÁNÍ\Hiderbot\Hiderbot\Hiderbot\bin\Debug\Hiderbot.exe
+C:\PROGRAMOVÁNÍ\Hiderbot\Hiderbot\Hiderbot\bin\Debug\Hiderbot.pdb
+C:\PROGRAMOVÁNÍ\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.csproj.AssemblyReference.cache
+C:\PROGRAMOVÁNÍ\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.Form1.resources
+C:\PROGRAMOVÁNÍ\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.Properties.Resources.resources
+C:\PROGRAMOVÁNÍ\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.csproj.GenerateResource.cache
+C:\PROGRAMOVÁNÍ\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.csproj.CoreCompileInputs.cache
+C:\PROGRAMOVÁNÍ\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.exe
+C:\PROGRAMOVÁNÍ\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.pdb
+C:\Users\cerma\hiderbot3\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.csproj.AssemblyReference.cache
+C:\Users\cerma\hiderbot3\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.Form1.resources
+C:\Users\cerma\hiderbot3\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.Properties.Resources.resources
+C:\Users\cerma\hiderbot3\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.csproj.GenerateResource.cache
+C:\Users\cerma\hiderbot3\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.csproj.CoreCompileInputs.cache
+C:\Users\cerma\hiderbot3\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.exe
+C:\Users\cerma\hiderbot3\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.pdb
+C:\Users\cerma\hiderbot3\Hiderbot\Hiderbot\Hiderbot\bin\Debug\Hiderbot.exe.config
+C:\Users\cerma\hiderbot3\Hiderbot\Hiderbot\Hiderbot\bin\Debug\Hiderbot.exe
+C:\Users\cerma\hiderbot3\Hiderbot\Hiderbot\Hiderbot\bin\Debug\Hiderbot.pdb
+C:\PROGRAMOVÁNÍ\Hiderbot\Hiderbot\Hiderbot\obj\Debug\Hiderbot.NewTeacher.resources
+>>>>>>> f7480c18cd9477dd52adf46c31b9e4c97668ebbc

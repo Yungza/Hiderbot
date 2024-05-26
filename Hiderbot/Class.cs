@@ -15,7 +15,7 @@ namespace Hiderbot
         {
             ClassNumber = classNumber;
             Requirement = requirement;
-        }
+        }           
 
 
     }

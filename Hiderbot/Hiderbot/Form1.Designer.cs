@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -94,10 +95,15 @@
             this.comboBox58 = new System.Windows.Forms.ComboBox();
             this.comboBox59 = new System.Windows.Forms.ComboBox();
             this.comboBox60 = new System.Windows.Forms.ComboBox();
+=======
+            this.button_CreateTeacher = new System.Windows.Forms.Button();
+            this.button_TeacherList = new System.Windows.Forms.Button();
+>>>>>>> f7480c18cd9477dd52adf46c31b9e4c97668ebbc
             this.SuspendLayout();
             // 
-            // label1
+            // button_CreateTeacher
             // 
+<<<<<<< HEAD
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 2F);
             this.label1.Location = new System.Drawing.Point(510, 7);
@@ -106,6 +112,25 @@
             this.label1.Size = new System.Drawing.Size(19, 4);
             this.label1.TabIndex = 0;
             this.label1.Text = "tobi je gay";
+=======
+            this.button_CreateTeacher.Location = new System.Drawing.Point(656, 306);
+            this.button_CreateTeacher.Name = "button_CreateTeacher";
+            this.button_CreateTeacher.Size = new System.Drawing.Size(132, 54);
+            this.button_CreateTeacher.TabIndex = 0;
+            this.button_CreateTeacher.Text = "New teacher";
+            this.button_CreateTeacher.UseVisualStyleBackColor = true;
+            this.button_CreateTeacher.Click += new System.EventHandler(this.button_CreateTeacher_Click);
+            // 
+            // button_TeacherList
+            // 
+            this.button_TeacherList.Location = new System.Drawing.Point(656, 387);
+            this.button_TeacherList.Name = "button_TeacherList";
+            this.button_TeacherList.Size = new System.Drawing.Size(132, 51);
+            this.button_TeacherList.TabIndex = 1;
+            this.button_TeacherList.Text = "Show existing teachers";
+            this.button_TeacherList.UseVisualStyleBackColor = true;
+            this.button_TeacherList.Click += new System.EventHandler(this.button_TeacherList_Click);
+>>>>>>> f7480c18cd9477dd52adf46c31b9e4c97668ebbc
             // 
             // button1
             // 
@@ -707,6 +732,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(901, 730);
             this.Controls.Add(this.comboBox59);
             this.Controls.Add(this.comboBox60);
@@ -775,16 +801,21 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_TeacherList);
+            this.Controls.Add(this.button_CreateTeacher);
+>>>>>>> f7480c18cd9477dd52adf46c31b9e4c97668ebbc
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+<<<<<<< HEAD
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -851,6 +882,10 @@
         private System.Windows.Forms.ComboBox comboBox58;
         private System.Windows.Forms.ComboBox comboBox59;
         private System.Windows.Forms.ComboBox comboBox60;
+=======
+        private System.Windows.Forms.Button button_CreateTeacher;
+        private System.Windows.Forms.Button button_TeacherList;
+>>>>>>> f7480c18cd9477dd52adf46c31b9e4c97668ebbc
     }
 }
 

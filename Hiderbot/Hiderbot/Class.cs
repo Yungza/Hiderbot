@@ -9,14 +9,12 @@ namespace Hiderbot
     internal class Class
     {
         public string ClassNumber { get; set; }
-        public List<Subjects> Subjects { get; set; }
+        public Dictionary<string, int> Requirement { get; set; }
 
-        public Class (string classNumber, List<Subjects> subjects)
+        public Class(string classNumber, Dictionary<string, int> requirement)
         {
             ClassNumber = classNumber;
-            Subjects = subjects;
+            Requirement = requirement;
         }
-
-
     }
 }
