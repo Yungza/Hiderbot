@@ -1,10 +1,32 @@
+<<<<<<< HEAD
+﻿using System;
+=======
 ﻿using Hiderbot;
 using System;
+>>>>>>> f7480c18cd9477dd52adf46c31b9e4c97668ebbc
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+<<<<<<< HEAD
+namespace Hiderbot
+{
+    internal class Data
+    {
+        public List<Teacher> teachers = new List<Teacher>();
+        public List<string> subjects = new List<string>();
+
+        public Data()
+        {
+            subjects.Add("Mathematics");
+            subjects.Add("Czech");
+            subjects.Add("History");
+            subjects.Add("English");
+            teachers.Add(new Teacher("Jandova", new List<string> { subjects[1], subjects[2] } ));
+            teachers.Add(new Teacher("Felbr", new List<string> { subjects[0] }));
+        }
+=======
 internal class Data
 {
     public List<Teacher> teachers = new List<Teacher>();
@@ -35,5 +57,6 @@ internal class Data
         classes.Add(class1);
         classes.Add(class2);
         classes.Add(class3);
+>>>>>>> f7480c18cd9477dd52adf46c31b9e4c97668ebbc
     }
 }
