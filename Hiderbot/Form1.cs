@@ -23,11 +23,12 @@ namespace Hiderbot
             Data data = new Data();
            
             Algorithm algorithm = new Algorithm();
-            
-            List<List<string>> subjects =  algorithm.Generator(data.teachers, data.classes);
 
-            algorithm.Print(subjects, data.classes);
-            
+            //List<List<Period>> subjects =  algorithm.Generator(data.teachers, data.classes);
+
+            //algorithm.Print(subjects, data.classes);
+            List<List<Period>> schedule =  algorithm.FindBestSchedule(data.teachers, data.classes);
+            algorithm.Print(schedule, data.classes);
         }
 
         private void button_CreateTeacher_Click(object sender, EventArgs e)

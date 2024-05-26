@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hiderbot
 {
-    internal class Period
+    public class Period
     {
         public Teacher Teacher { get; set; }
         public string Subject { get; set; }
