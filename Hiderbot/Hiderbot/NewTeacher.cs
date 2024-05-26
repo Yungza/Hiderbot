@@ -25,6 +25,7 @@ namespace Hiderbot
             subjects.Add(textBox_NewTeacherSubject2.Text);
             Teacher newTeacher = new Teacher(name, subjects);
             TeachersList.AddTeacher(newTeacher);
+            this.Close();
         }
     }
 }
