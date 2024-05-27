@@ -35,7 +35,6 @@ namespace Hiderbot
         public Algorithm()
         {
             Data data = new Data();
-            teachers = data.teachers;
         }
 
         public List<List<Period>> Generator(List<Teacher> teachers, List<Class> classes)
@@ -163,7 +162,7 @@ namespace Hiderbot
 
 
 
-        public void Print(List<List<Period>> scheduleAll, List<Class> classes)
+        public void Print(List<List<Period>> scheduleAll, List<Class> classes, List<string> output)
         {
             for (int i = 0; i < scheduleAll.Count; i++)
             {
@@ -171,6 +170,9 @@ namespace Hiderbot
                 foreach (var period in scheduleAll[i])
                 {
                     Console.WriteLine($"  Teacher: {period.Teacher.Name}, Subject: {period.Subject}");
+                    output.Add($"{period.Subject} : {period.Teacher.Name}");
+
+
                 }
             }
             Console.WriteLine($" The fitness is: {CalculateFitness(scheduleAll)}");

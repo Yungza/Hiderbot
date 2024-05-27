@@ -16,7 +16,7 @@ namespace Hiderbot
             Subjects = subjects;
         }
     }
-    public static class TeachersList // list of Teaachers
+    public static class TeachersList // list of Teachers
     {
         public static List<Teacher> teachersList = new List<Teacher>();
         public static void AddTeacher(Teacher newTeacher) 
