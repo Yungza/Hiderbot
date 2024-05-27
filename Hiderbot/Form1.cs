@@ -74,3 +74,26 @@ namespace Hiderbot
     }
 
 }
+/*
+Credits:
+Filip : coding and visionary
+
+Honza : coding 
+
+Bára : ฅ^•ﻌ•^ฅ
+
+David : HiderBot™, pure sexappeal, mustache
+
+
+
+
+
+.
+.
+.
+
+tobi : pijavice(did nothing but complained)
+
+
+
+*/
