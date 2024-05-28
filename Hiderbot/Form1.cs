@@ -18,28 +18,33 @@ namespace Hiderbot
         public Form1()
         {
             InitializeComponent();
-        
-
             Data data = new Data();
-           
             Algorithm algorithm = new Algorithm();
 
-            List<string> output = new List<string> ();
+            List<List<List<Period>>> schedule = algorithm.FindBestSchedule(TeachersList.teachersList, data.classes);
+            algorithm.Print(schedule, data.classes);
 
-            //List<List<Period>> subjects =  algorithm.Generator(data.teachers, data.classes);
+            DisplaySchedule(schedule, data.classes);
+        }
+        private void DisplaySchedule(List<List<List<Period>>> schedule, List<Class> classes)
+        {
+            string[] daysOfWeek = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
+            List<ListBox> listBoxes = new List<ListBox> { listBox1, listBox2, listBox3, listBox4, listBox5 };
 
-            //algorithm.Print(subjects, data.classes);
-            List<List<Period>> schedule =  algorithm.FindBestSchedule(TeachersList.teachersList, data.classes);
-            algorithm.Print(schedule, data.classes, output);
-            listBox1.Items.Add("1.A:");
-            foreach (string line in output)
+            for (int day = 0; day < schedule.Count; day++)
             {
-                listBox1.Items.Add(line);
+                listBoxes[day].Items.Clear();
+                listBoxes[day].Items.Add(daysOfWeek[day] + ":");
+
+                for (int classIndex = 0; classIndex < schedule[day].Count; classIndex++)
+                {
+                    listBoxes[day].Items.Add("  Class " + classes[classIndex].ClassNumber + ":");
+                    foreach (var period in schedule[day][classIndex])
+                    {
+                        listBoxes[day].Items.Add($"    {period.Subject} : {period.Teacher.Name}");
+                    }
+                }
             }
-            Console.WriteLine(listBox1.Items[1]);
-            listBox1.Items.Insert(8, "1.B:");
-            listBox1.Items.Insert(16, "1.C");
-            
         }
 
         private void button_CreateTeacher_Click(object sender, EventArgs e)
