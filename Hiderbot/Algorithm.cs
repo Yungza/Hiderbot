@@ -31,28 +31,43 @@ namespace Hiderbot
 
         List<Teacher> teachers = new List<Teacher>();
         List<Class> classes = new List<Class>();
-        const int DaysInWeek = 5;
+
         public Algorithm()
         {
             Data data = new Data();
+            List<Teacher> teachers = new List<Teacher>();
         }
 
-        public List<List<List<Period>>> Generator(List<Teacher> teachers, List<Class> classes)
+        public List<List<Period>> Generator(List<Teacher> teachers, List<Class> classes)
         {
-            List<List<List<Period>>> weeklySchedule = new List<List<List<Period>>>();
+            List<List<Period>> scheduleAll = new List<List<Period>>();
+            List<List<string>> subjectsAll = new List<List<string>>();
 
-            // Initialize the schedule for the entire week
-            for (int day = 0; day < DaysInWeek; day++)
+            foreach (Class c in classes)
             {
-                weeklySchedule.Add(new List<List<Period>>());
-                for (int classIndex = 0; classIndex < classes.Count; classIndex++)
+                List<string> subjects = new List<string>();
+
+                // Loop through the Requirement dictionary of the class
+                foreach (var subject in c.Requirement)
                 {
-                    weeklySchedule[day].Add(new List<Period>());
+                    string subjectName = subject.Key;
+                    int subjectCount = subject.Value;
+
+                    // Add the subject name to the subjects list the number of times it is required
+                    for (int i = 0; i < subjectCount; i++)
+                    {
+                        subjects.Add(subjectName);
+                    }
                 }
+
+                // Add the subjects list to the subjectsAll list
+                ListExtensions.Shuffle(subjects);
+                subjectsAll.Add(subjects);
             }
 
-            // Create a mapping of subjects to teachers
             var subjectTeacherMap = new Dictionary<string, List<Teacher>>();
+
+            // Prepare a map of subjects to teachers
             foreach (var teacher in teachers)
             {
                 foreach (var subject in teacher.Subjects)
@@ -65,102 +80,75 @@ namespace Hiderbot
                 }
             }
 
-            // Shuffle teachers for each subject
+            // Shuffle teachers for each subject group
             foreach (var key in subjectTeacherMap.Keys.ToList())
             {
                 ListExtensions.Shuffle(subjectTeacherMap[key]);
             }
 
-            // Schedule classes for each day
-            for (int day = 0; day < DaysInWeek; day++)
+            // Assign periods
+            foreach (var subjectList in subjectsAll)
             {
-                foreach (var classItem in classes)
+                List<Period> schedule = new List<Period>();
+
+                foreach (var subject in subjectList)
                 {
-                    var subjects = classItem.Requirement.SelectMany(r => Enumerable.Repeat(r.Key, r.Value)).ToList();
-                    ListExtensions.Shuffle(subjects);
-
-                    for (int periodIndex = 0; periodIndex < subjects.Count; periodIndex++)
+                    if (subjectTeacherMap.ContainsKey(subject))
                     {
-                        var subject = subjects[periodIndex];
-                        if (subjectTeacherMap.ContainsKey(subject))
+                        var availableTeachers = subjectTeacherMap[subject];
+                        foreach (var teacher in availableTeachers)
                         {
-                            var availableTeachers = subjectTeacherMap[subject].ToList();
-
-                            foreach (var teacher in availableTeachers)
-                            {
-                                // Check if the teacher is available for this period
-                                if (IsTeacherAvailable(teacher, weeklySchedule, day, periodIndex))
-                                {
-                                    weeklySchedule[day][classes.IndexOf(classItem)].Add(new Period(teacher, subject));
-                                    break; // Assign only one teacher per subject period
-                                }
-                            }
+                            Period period = new Period(teacher, subject);
+                            schedule.Add(period);
+                            break; // Assign only one teacher per subject period
                         }
                     }
                 }
+
+                scheduleAll.Add(schedule);
             }
 
-            return weeklySchedule;
+            return scheduleAll;
         }
-        private bool IsTeacherAvailable(Teacher teacher, List<List<List<Period>>> schedule, int day, int periodIndex)
-        {
-            foreach (var periods in schedule[day])
-            {
-                if (periods.Count > periodIndex && periods[periodIndex].Teacher == teacher)
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
-        public int CalculateFitness(List<List<List<Period>>> schedule)
+        public int CalculateFitness(List<List<Period>> scheduleAll)
         {
             int fitness = 100;
-            var teacherScheduleMap = new Dictionary<Teacher, Dictionary<int, HashSet<int>>>();
+            var teacherScheduleMap = new Dictionary<Teacher, HashSet<int>>();
 
-            for (int day = 0; day < schedule.Count; day++)
+            for (int i = 0; i < scheduleAll.Count; i++)
             {
-                for (int classIndex = 0; classIndex < schedule[day].Count; classIndex++)
+                for (int j = 0; j < scheduleAll[i].Count; j++)
                 {
-                    for (int periodIndex = 0; periodIndex < schedule[day][classIndex].Count; periodIndex++)
+                    Period period = scheduleAll[i][j];
+                    Teacher teacher = period.Teacher;
+
+                    if (!teacherScheduleMap.ContainsKey(teacher))
                     {
-                        Period period = schedule[day][classIndex][periodIndex];
-                        Teacher teacher = period.Teacher;
+                        teacherScheduleMap[teacher] = new HashSet<int>();
+                    }
 
-                        if (!teacherScheduleMap.ContainsKey(teacher))
-                        {
-                            teacherScheduleMap[teacher] = new Dictionary<int, HashSet<int>>();
-                        }
-
-                        if (!teacherScheduleMap[teacher].ContainsKey(day))
-                        {
-                            teacherScheduleMap[teacher][day] = new HashSet<int>();
-                        }
-
-                        // If the teacher is already scheduled for this period on this day, it's a conflict
-                        if (teacherScheduleMap[teacher][day].Contains(periodIndex))
-                        {
-                            fitness -= 10;
-                        }
-                        else
-                        {
-                            teacherScheduleMap[teacher][day].Add(periodIndex);
-                        }
+                    // If the teacher is already scheduled for this time slot, it's a conflict
+                    if (teacherScheduleMap[teacher].Contains(j))
+                    {
+                        fitness -= 10;
+                    }
+                    else
+                    {
+                        teacherScheduleMap[teacher].Add(j);
                     }
                 }
             }
 
             return fitness;
         }
-
-        public List<List<List<Period>>> FindBestSchedule(List<Teacher> teachers, List<Class> classes, int iterations = 1000)
+        public List<List<Period>> FindBestSchedule(List<Teacher> teachers, List<Class> classes, int iterations = 1)
         {
-            List<List<List<Period>>> bestSchedule = null;
+            List<List<Period>> bestSchedule = null;
             int bestFitness = int.MinValue;
 
             for (int i = 0; i < iterations; i++)
             {
-                List<List<List<Period>>> currentSchedule = Generator(teachers, classes);
+                List<List<Period>> currentSchedule = Generator(teachers, classes);
                 int currentFitness = CalculateFitness(currentSchedule);
 
                 if (currentFitness > bestFitness)
@@ -169,32 +157,99 @@ namespace Hiderbot
                     bestSchedule = currentSchedule;
                 }
             }
-
+            if(bestFitness != 100)
+            {
+                ThrowRandomBullshit(bestSchedule);
+            }
             return bestSchedule;
         }
 
 
 
-        public void Print(List<List<List<Period>>> schedule, List<Class> classes)
+        public void Print(List<List<Period>> scheduleAll, List<Class> classes)
         {
-            string[] daysOfWeek = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
-
-            for (int day = 0; day < schedule.Count; day++)
+            for (int i = 0; i < scheduleAll.Count; i++)
             {
-                Console.WriteLine($"{daysOfWeek[day]}:");
-
-                for (int classIndex = 0; classIndex < schedule[day].Count; classIndex++)
+                Console.WriteLine($"Class {classes[i].ClassNumber}:");
+                foreach (var period in scheduleAll[i])
                 {
-                    Console.WriteLine($"  Class {classes[classIndex].ClassNumber}:");
+                    Console.WriteLine($"  Teacher: {period.Teacher.Name}, Subject: {period.Subject}");
+                }
+            }
+            Console.WriteLine($" The fitness is: {CalculateFitness(scheduleAll)}");
+        }
+        public static List<List<string>> SplitDays(List<string> list)
+        {
+            // Initialize random number generator
+            Random random = new Random();
 
-                    foreach (var period in schedule[day][classIndex])
+            // Determine the base size for each part
+            int baseSize = list.Count / 5;
+            int extraItems = list.Count % 5;
+
+            // Create a list to hold the 5 parts
+            List<List<string>> result = new List<List<string>>();
+
+            // Initialize the 5 parts
+            for (int i = 0; i < 5; i++)
+            {
+                result.Add(new List<string>());
+            }
+
+            // Fill the parts with the base size
+            int index = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < baseSize; j++)
+                {
+                    result[i].Add(list[index++]);
+                }
+            }
+
+            // Distribute the extra items randomly
+            for (int i = 0; i < extraItems; i++)
+            {
+                int randomIndex = random.Next(5);
+                result[randomIndex].Add(list[index++]);
+            }
+
+            return result;
+        }
+        public List<List<Period>> ThrowRandomBullshit(List<List<Period>> scheduleAll)
+        {
+            Console.WriteLine(CalculateFitness(scheduleAll));
+            Data data = new Data();
+            Teacher schovanek = new Teacher("Schovanek", new List<string> { "-" });
+            var teacherScheduleMap = new Dictionary<Teacher, HashSet<int>>();
+            Period blank = new Period(schovanek, "-");
+            for (int i = 0; i < scheduleAll.Count; i++)
+            {
+                for (int j = 0; j < scheduleAll[i].Count; j++)
+                {
+                    Period period = scheduleAll[i][j];
+                    Teacher teacher = period.Teacher;
+
+                    if (!teacherScheduleMap.ContainsKey(teacher))
                     {
-                        Console.WriteLine($"    Teacher: {period.Teacher.Name}, Subject: {period.Subject}");
+                        teacherScheduleMap[teacher] = new HashSet<int>();
+                    }
+
+                    // If the teacher is already scheduled for this time slot, it's a conflict
+                    if (teacherScheduleMap[teacher].Contains(j))
+                    {
+                        scheduleAll[i].Insert(j, blank);
+
+                    }
+                    else
+                    {
+                        teacherScheduleMap[teacher].Add(j);
                     }
                 }
             }
 
-            Console.WriteLine($"The fitness is: {CalculateFitness(schedule)}");
+            return scheduleAll;
         }
+
+
     }
 }

@@ -20,11 +20,14 @@ namespace Hiderbot
             InitializeComponent();
             Data data = new Data();
             Algorithm algorithm = new Algorithm();
-
-            List<List<List<Period>>> schedule = algorithm.FindBestSchedule(TeachersList.teachersList, data.classes);
+            List<List<Period>> schedule = algorithm.FindBestSchedule(TeachersList.teachersList, data.classes);
             algorithm.Print(schedule, data.classes);
 
+
+            /*List<List<List<Period>>> schedule = algorithm.FindBestSchedule(TeachersList.teachersList, data.classes);
+            algorithm.Print(schedule, data.classes);
             DisplaySchedule(schedule, data.classes);
+            */
         }
         private void DisplaySchedule(List<List<List<Period>>> schedule, List<Class> classes)
         {
