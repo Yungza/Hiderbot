@@ -22,34 +22,13 @@ namespace Hiderbot
             Algorithm algorithm = new Algorithm();
             List<List<Period>> schedule = algorithm.FindBestSchedule(TeachersList.teachersList, data.classes);
             algorithm.Print(schedule, data.classes);
-
-
+            FunctionsCSV.LoadCsvToDataGridView(dataGridViewSchedule, @"C:\Users\tobia\Documents\GitHub\Hiderbot\Hiderbot\Schedule.CSV");
             /*List<List<List<Period>>> schedule = algorithm.FindBestSchedule(TeachersList.teachersList, data.classes);
             algorithm.Print(schedule, data.classes);
             DisplaySchedule(schedule, data.classes);
             */
         }
-        private void DisplaySchedule(List<List<List<Period>>> schedule, List<Class> classes)
-        {
-            string[] daysOfWeek = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
-            List<ListBox> listBoxes = new List<ListBox> { listBox1, listBox2, listBox3, listBox4, listBox5 };
-
-            for (int day = 0; day < schedule.Count; day++)
-            {
-                listBoxes[day].Items.Clear();
-                listBoxes[day].Items.Add(daysOfWeek[day] + ":");
-
-                for (int classIndex = 0; classIndex < schedule[day].Count; classIndex++)
-                {
-                    listBoxes[day].Items.Add("  Class " + classes[classIndex].ClassNumber + ":");
-                    foreach (var period in schedule[day][classIndex])
-                    {
-                        listBoxes[day].Items.Add($"    {period.Subject} : {period.Teacher.Name}");
-                    }
-                }
-            }
-        }
-
+        
         private void button_CreateTeacher_Click(object sender, EventArgs e)
         {
             NewTeacher newTeacher = new NewTeacher();
@@ -79,6 +58,15 @@ namespace Hiderbot
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Data data = new Data();
+            Algorithm algorithm = new Algorithm();
+            List<List<Period>> schedule = algorithm.FindBestSchedule(TeachersList.teachersList, data.classes);
+            algorithm.Print(schedule, data.classes);
+            FunctionsCSV.LoadCsvToDataGridView(dataGridViewSchedule, @"C:\Users\tobia\Documents\GitHub\Hiderbot\Hiderbot\Schedule.CSV");
+        }
     }
 
 }
@@ -100,7 +88,7 @@ David : HiderBot™, pure sexappeal, mustache
 .
 .
 
-tobi : pijavice(did nothing but complained)
+tobi : 
 
 
 
