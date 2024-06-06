@@ -34,6 +34,7 @@
             this.dataGridViewSchedule = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button_help = new System.Windows.Forms.Button();
+            this.button_ExportFolderSelect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,11 +72,11 @@
             // 
             this.dataGridViewSchedule.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridViewSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSchedule.Location = new System.Drawing.Point(0, 35);
+            this.dataGridViewSchedule.Location = new System.Drawing.Point(15, 35);
             this.dataGridViewSchedule.Name = "dataGridViewSchedule";
             this.dataGridViewSchedule.RowHeadersWidth = 51;
             this.dataGridViewSchedule.RowTemplate.Height = 24;
-            this.dataGridViewSchedule.Size = new System.Drawing.Size(900, 600);
+            this.dataGridViewSchedule.Size = new System.Drawing.Size(885, 600);
             this.dataGridViewSchedule.TabIndex = 3;
             // 
             // button1
@@ -97,12 +98,24 @@
             this.button_help.TabIndex = 5;
             this.button_help.Text = "Help";
             this.button_help.UseVisualStyleBackColor = true;
+            this.button_help.Click += new System.EventHandler(this.button_help_Click);
+            // 
+            // button_ExportFolderSelect
+            // 
+            this.button_ExportFolderSelect.Location = new System.Drawing.Point(906, 133);
+            this.button_ExportFolderSelect.Name = "button_ExportFolderSelect";
+            this.button_ExportFolderSelect.Size = new System.Drawing.Size(344, 43);
+            this.button_ExportFolderSelect.TabIndex = 6;
+            this.button_ExportFolderSelect.Text = "Select export folder";
+            this.button_ExportFolderSelect.UseVisualStyleBackColor = true;
+            this.button_ExportFolderSelect.Click += new System.EventHandler(this.button_ExportFolderSelect_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.button_ExportFolderSelect);
             this.Controls.Add(this.button_help);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridViewSchedule);
@@ -128,6 +141,7 @@
         private System.Windows.Forms.DataGridView dataGridViewSchedule;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button_help;
+        private System.Windows.Forms.Button button_ExportFolderSelect;
     }
 }
 

@@ -12,34 +12,50 @@ namespace Hiderbot
     {
         public static void SaveScheduleToCsv(List<List<Period>> schedule, string filePath)
         {
-            using (StreamWriter writer = new StreamWriter(filePath))
+            try
             {
-                foreach (var row in schedule)
+                using (StreamWriter writer = new StreamWriter(filePath))
                 {
-                    var rowData = row.Select(period => $"{period.Teacher.Name} – {period.Subject}");
-                    writer.WriteLine(string.Join(",", rowData));
+                    foreach (var row in schedule)
+                    {
+                        var rowData = row.Select(period => $"{period.Teacher.Name} – {period.Subject}");
+                        writer.WriteLine(string.Join(",", rowData));
+                    }
                 }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
         public static void LoadCsvToDataGridView(DataGridView dataGridView, string filePath)
         {
-            dataGridView.Rows.Clear(); // Clear existing rows
-            dataGridView.Columns.Clear(); // Clear existing columns
-            
-            for (int i = 0; i < 10; i++)
+            try
             {
-                dataGridView.Columns.Add((i + 1) + ". hodina", (i + 1) + ". hodina");
-            }
+                dataGridView.Rows.Clear(); // Clear existing rows
+                dataGridView.Columns.Clear(); // Clear existing columns
 
-            // Populate rows from CSV file data
-            using (StreamReader reader = new StreamReader(filePath))
-            {
-                while (!reader.EndOfStream)
+                for (int i = 0; i < 10; i++)
                 {
-                    string[] fields = reader.ReadLine().Split(',');
-                    dataGridView.Rows.Add(fields);
+                    dataGridView.Columns.Add((i + 1) + ". hodina", (i + 1) + ". hodina");
+                }
+
+                // Populate rows from CSV file data
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    while (!reader.EndOfStream)
+                    {
+                        string[] fields = reader.ReadLine().Split(',');
+                        dataGridView.Rows.Add(fields);
+                    }
                 }
             }
+            catch (Exception)
+            {
+                throw;
+            }
+            
         }
     }
 }
