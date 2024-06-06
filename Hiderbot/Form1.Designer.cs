@@ -35,15 +35,18 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button_help = new System.Windows.Forms.Button();
             this.button_ExportFolderSelect = new System.Windows.Forms.Button();
+            this.button_saveFromGridView = new System.Windows.Forms.Button();
+            this.button_loadTableFromCSV = new System.Windows.Forms.Button();
+            this.button_rickroll = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
             this.SuspendLayout();
             // 
             // button_CreateTeacher
             // 
-            this.button_CreateTeacher.Location = new System.Drawing.Point(906, 547);
+            this.button_CreateTeacher.Location = new System.Drawing.Point(1021, 592);
             this.button_CreateTeacher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_CreateTeacher.Name = "button_CreateTeacher";
-            this.button_CreateTeacher.Size = new System.Drawing.Size(344, 43);
+            this.button_CreateTeacher.Size = new System.Drawing.Size(112, 43);
             this.button_CreateTeacher.TabIndex = 0;
             this.button_CreateTeacher.Text = "New teacher";
             this.button_CreateTeacher.UseVisualStyleBackColor = true;
@@ -51,10 +54,10 @@
             // 
             // button_TeacherList
             // 
-            this.button_TeacherList.Location = new System.Drawing.Point(906, 594);
+            this.button_TeacherList.Location = new System.Drawing.Point(1138, 594);
             this.button_TeacherList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_TeacherList.Name = "button_TeacherList";
-            this.button_TeacherList.Size = new System.Drawing.Size(344, 41);
+            this.button_TeacherList.Size = new System.Drawing.Size(112, 41);
             this.button_TeacherList.TabIndex = 1;
             this.button_TeacherList.Text = "Show existing teachers";
             this.button_TeacherList.UseVisualStyleBackColor = true;
@@ -76,15 +79,15 @@
             this.dataGridViewSchedule.Name = "dataGridViewSchedule";
             this.dataGridViewSchedule.RowHeadersWidth = 51;
             this.dataGridViewSchedule.RowTemplate.Height = 24;
-            this.dataGridViewSchedule.Size = new System.Drawing.Size(885, 600);
+            this.dataGridViewSchedule.Size = new System.Drawing.Size(1000, 600);
             this.dataGridViewSchedule.TabIndex = 3;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button1.Location = new System.Drawing.Point(906, 35);
+            this.button1.Location = new System.Drawing.Point(1021, 35);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(344, 43);
+            this.button1.Size = new System.Drawing.Size(229, 43);
             this.button1.TabIndex = 4;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = false;
@@ -92,9 +95,9 @@
             // 
             // button_help
             // 
-            this.button_help.Location = new System.Drawing.Point(906, 84);
+            this.button_help.Location = new System.Drawing.Point(1021, 84);
             this.button_help.Name = "button_help";
-            this.button_help.Size = new System.Drawing.Size(344, 43);
+            this.button_help.Size = new System.Drawing.Size(112, 43);
             this.button_help.TabIndex = 5;
             this.button_help.Text = "Help";
             this.button_help.UseVisualStyleBackColor = true;
@@ -102,19 +105,52 @@
             // 
             // button_ExportFolderSelect
             // 
-            this.button_ExportFolderSelect.Location = new System.Drawing.Point(906, 133);
+            this.button_ExportFolderSelect.Location = new System.Drawing.Point(1021, 133);
             this.button_ExportFolderSelect.Name = "button_ExportFolderSelect";
-            this.button_ExportFolderSelect.Size = new System.Drawing.Size(344, 43);
+            this.button_ExportFolderSelect.Size = new System.Drawing.Size(229, 43);
             this.button_ExportFolderSelect.TabIndex = 6;
-            this.button_ExportFolderSelect.Text = "Select export folder";
+            this.button_ExportFolderSelect.Text = "Select folder";
             this.button_ExportFolderSelect.UseVisualStyleBackColor = true;
             this.button_ExportFolderSelect.Click += new System.EventHandler(this.button_ExportFolderSelect_Click);
+            // 
+            // button_saveFromGridView
+            // 
+            this.button_saveFromGridView.Location = new System.Drawing.Point(1021, 182);
+            this.button_saveFromGridView.Name = "button_saveFromGridView";
+            this.button_saveFromGridView.Size = new System.Drawing.Size(112, 43);
+            this.button_saveFromGridView.TabIndex = 7;
+            this.button_saveFromGridView.Text = "Save table";
+            this.button_saveFromGridView.UseVisualStyleBackColor = true;
+            this.button_saveFromGridView.Click += new System.EventHandler(this.button_saveFromGridView_Click);
+            // 
+            // button_loadTableFromCSV
+            // 
+            this.button_loadTableFromCSV.Location = new System.Drawing.Point(1138, 182);
+            this.button_loadTableFromCSV.Name = "button_loadTableFromCSV";
+            this.button_loadTableFromCSV.Size = new System.Drawing.Size(112, 43);
+            this.button_loadTableFromCSV.TabIndex = 8;
+            this.button_loadTableFromCSV.Text = "Load table";
+            this.button_loadTableFromCSV.UseVisualStyleBackColor = true;
+            this.button_loadTableFromCSV.Click += new System.EventHandler(this.button_loadTableFromCSV_Click);
+            // 
+            // button_rickroll
+            // 
+            this.button_rickroll.Location = new System.Drawing.Point(1138, 84);
+            this.button_rickroll.Name = "button_rickroll";
+            this.button_rickroll.Size = new System.Drawing.Size(112, 43);
+            this.button_rickroll.TabIndex = 9;
+            this.button_rickroll.Text = "Video tutorial";
+            this.button_rickroll.UseVisualStyleBackColor = true;
+            this.button_rickroll.Click += new System.EventHandler(this.button_rickroll_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.button_rickroll);
+            this.Controls.Add(this.button_loadTableFromCSV);
+            this.Controls.Add(this.button_saveFromGridView);
             this.Controls.Add(this.button_ExportFolderSelect);
             this.Controls.Add(this.button_help);
             this.Controls.Add(this.button1);
@@ -142,6 +178,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button_help;
         private System.Windows.Forms.Button button_ExportFolderSelect;
+        private System.Windows.Forms.Button button_saveFromGridView;
+        private System.Windows.Forms.Button button_loadTableFromCSV;
+        private System.Windows.Forms.Button button_rickroll;
     }
 }
 

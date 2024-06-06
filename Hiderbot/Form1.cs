@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace Hiderbot
     public partial class Form1 : Form
     {
         List <Teacher> teachers = new List <Teacher> ();
-        string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Schedule.CSV"); //stackoverflow for path
+        string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Schedule.csv"); //stackoverflow for path
         public Form1()
         {
             InitializeComponent();
@@ -95,9 +96,32 @@ namespace Hiderbot
         private void button_help_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Welcome to HiderBot! Gymvod's best schedule generator" +
-                "Press start to start the algorithm" +
-                "The default finished schedule filepath is you documents folder" +
-                "Enjoy our app, if you happen to find any bugs, let us know!");
+                "\nPress start to start the algorithm" +
+                "\nThe default schedule filepath is your documents folder" +
+                "\nThe programe always imports/exports using the file \"Schedule.csv\"" +
+                "\nGenerating a new schedule automatically overwrites the old one" +
+                "\nEnjoy our app, if you happen to find any bugs, let us know!" +
+                "");
+        }
+
+        private void button_saveFromGridView_Click(object sender, EventArgs e)
+        {
+            FunctionsCSV.SaveDataGridViewToCsv(dataGridViewSchedule, filePath);
+        }
+
+        private void button_loadTableFromCSV_Click(object sender, EventArgs e)
+        {
+            FunctionsCSV.LoadCsvToDataGridView(dataGridViewSchedule,filePath);
+        }
+
+        private void button_rickroll_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo psi = new ProcessStartInfo(); // credit https://tpforums.org/forum/archive/index.php/t-1524.html and others
+            psi.CreateNoWindow = true;
+            psi.UseShellExecute = true;
+            psi.FileName = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+            psi.WindowStyle = ProcessWindowStyle.Hidden;
+            Process.Start(psi);
         }
     }
 

@@ -36,7 +36,7 @@ namespace Hiderbot
                 dataGridView.Rows.Clear(); // Clear existing rows
                 dataGridView.Columns.Clear(); // Clear existing columns
 
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < 16; i++)
                 {
                     dataGridView.Columns.Add((i + 1) + ". hodina", (i + 1) + ". hodina");
                 }
@@ -55,7 +55,21 @@ namespace Hiderbot
             {
                 throw;
             }
-            
+        }
+        public static void SaveDataGridViewToCsv(DataGridView dataGridView, string filePath)
+        {
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                // Write rows
+                foreach (DataGridViewRow row in dataGridView.Rows)
+                {
+                    if (!row.IsNewRow) // Skip the new row at the bottom of DataGridView
+                    {
+                        var cells = row.Cells.Cast<DataGridViewCell>();
+                        writer.WriteLine(string.Join(",", cells.Select(cell => string.IsNullOrEmpty(cell.Value?.ToString()) ? "N/A" : cell.Value.ToString())));
+                    }
+                }
+            }
         }
     }
 }
