@@ -162,7 +162,6 @@ namespace Hiderbot
             {
                 ThrowRandomBullshit(bestSchedule);
             }
-            FunctionsCSV.SaveScheduleToCsv(bestSchedule, @"C:\Users\tobia\Documents\GitHub\Hiderbot\Hiderbot\Schedule.CSV"); //replace filepath with a user selected one
             return bestSchedule;
         }
 
