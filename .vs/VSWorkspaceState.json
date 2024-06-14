@@ -1,15 +1,8 @@
 {
   "ExpandedNodes": [
-<<<<<<< HEAD
-    ""
+    "",
+    "\\Hiderbot"
   ],
   "SelectedNode": "\\Hiderbot.sln",
-=======
-    "",
-    "\\Hiderbot",
-    "\\Hiderbot\\Hiderbot"
-  ],
-  "SelectedNode": "\\Hiderbot\\Hiderbot.sln",
->>>>>>> f7480c18cd9477dd52adf46c31b9e4c97668ebbc
   "PreviewInSolutionExplorer": false
 }
