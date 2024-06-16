@@ -3,44 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|c:\\users\\tobia\\documents\\github\\hiderbot\\hiderbot\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:hiderbot\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\hiderbot\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:hiderbot\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\NewTeacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:Hiderbot\\NewTeacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\hiderbot\\algorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:hiderbot\\algorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:Hiderbot\\Data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:Hiderbot\\Teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\hiderbot\\functionscsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:hiderbot\\functionscsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:Hiderbot\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\hiderbot\\functionscsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:hiderbot\\functionscsv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:Hiderbot\\Teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\hiderbot\\algorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:hiderbot\\algorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|c:\\users\\tobia\\documents\\github\\hiderbot\\hiderbot\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:hiderbot\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:Hiderbot\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\hiderbot\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:hiderbot\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\hiderbot\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:hiderbot\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Timetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:Hiderbot\\Timetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Period.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:Hiderbot\\Period.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\NewTeacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:Hiderbot\\NewTeacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\hiderbot\\newteacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -49,14 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:Hiderbot\\Class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Period.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:Hiderbot\\Period.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\hiderbot\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
-      "RelativeMoniker": "D:0:0:{25AFDFD8-0049-4B86-B87D-38AD54BD780B}|Hiderbot\\Hiderbot.csproj|solutionrelative:hiderbot\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,15 +70,30 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
+              "Title": "Teacher.cs",
+              "DocumentMoniker": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Teacher.cs",
+              "RelativeDocumentMoniker": "Hiderbot\\Teacher.cs",
+              "ToolTip": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Teacher.cs",
+              "RelativeToolTip": "Hiderbot\\Teacher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T09:09:20.929Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "FunctionsCSV.cs",
               "DocumentMoniker": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\FunctionsCSV.cs",
               "RelativeDocumentMoniker": "Hiderbot\\FunctionsCSV.cs",
               "ToolTip": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\FunctionsCSV.cs",
               "RelativeToolTip": "Hiderbot\\FunctionsCSV.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAIwDsAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T08:18:44.656Z"
+              "WhenOpened": "2024-06-05T08:18:44.656Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -99,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Program.cs",
               "RelativeDocumentMoniker": "Hiderbot\\Program.cs",
@@ -107,48 +118,25 @@
               "RelativeToolTip": "Hiderbot\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:09:20.865Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Form1.cs",
-              "RelativeDocumentMoniker": "Hiderbot\\Form1.cs",
-              "ToolTip": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Form1.cs",
-              "RelativeToolTip": "Hiderbot\\Form1.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAuwHYAAACIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T09:09:20.865Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Data.cs",
-              "DocumentMoniker": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Data.cs",
-              "RelativeDocumentMoniker": "Hiderbot\\Data.cs",
-              "ToolTip": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Data.cs",
-              "RelativeToolTip": "Hiderbot\\Data.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBYAAABbAAAA",
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Form1.cs",
+              "RelativeDocumentMoniker": "Hiderbot\\Form1.cs",
+              "ToolTip": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Form1.cs",
+              "RelativeToolTip": "Hiderbot\\Form1.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAiwFwAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:09:20.899Z"
+              "WhenOpened": "2024-05-29T09:09:20.865Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Teacher.cs",
-              "DocumentMoniker": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Teacher.cs",
-              "RelativeDocumentMoniker": "Hiderbot\\Teacher.cs",
-              "ToolTip": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Teacher.cs",
-              "RelativeToolTip": "Hiderbot\\Teacher.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAuwBkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:09:20.929Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Timetable.cs",
               "DocumentMoniker": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Timetable.cs",
               "RelativeDocumentMoniker": "Hiderbot\\Timetable.cs",
@@ -156,11 +144,12 @@
               "RelativeToolTip": "Hiderbot\\Timetable.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:09:20.929Z"
+              "WhenOpened": "2024-05-29T09:09:20.929Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
               "Title": "Period.cs",
               "DocumentMoniker": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Period.cs",
               "RelativeDocumentMoniker": "Hiderbot\\Period.cs",
@@ -168,11 +157,12 @@
               "RelativeToolTip": "Hiderbot\\Period.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:09:20.929Z"
+              "WhenOpened": "2024-05-29T09:09:20.929Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Class.cs",
               "DocumentMoniker": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Class.cs",
               "RelativeDocumentMoniker": "Hiderbot\\Class.cs",
@@ -184,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "NewTeacher.cs [Design]",
               "DocumentMoniker": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\NewTeacher.cs",
               "RelativeDocumentMoniker": "Hiderbot\\NewTeacher.cs",
@@ -196,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "NewTeacher.cs",
               "DocumentMoniker": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\NewTeacher.cs",
               "RelativeDocumentMoniker": "Hiderbot\\NewTeacher.cs",
@@ -209,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Form1.cs",
               "RelativeDocumentMoniker": "Hiderbot\\Form1.cs",
@@ -221,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Hiderbot\\Form1.Designer.cs",
@@ -234,14 +224,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 6,
               "Title": "Resources.resx",
               "DocumentMoniker": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Properties\\Resources.resx",
               "RelativeDocumentMoniker": "Hiderbot\\Properties\\Resources.resx",
               "ToolTip": "C:\\Users\\tobia\\Documents\\GitHub\\Hiderbot\\Hiderbot\\Properties\\Resources.resx",
               "RelativeToolTip": "Hiderbot\\Properties\\Resources.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2024-05-29T09:09:20.941Z"
+              "WhenOpened": "2024-05-29T09:09:20.941Z",
+              "EditorCaption": ""
             }
           ]
         }

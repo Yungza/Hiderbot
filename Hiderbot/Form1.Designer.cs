@@ -43,10 +43,11 @@
             // 
             // button_CreateTeacher
             // 
-            this.button_CreateTeacher.Location = new System.Drawing.Point(1021, 592);
-            this.button_CreateTeacher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_CreateTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.button_CreateTeacher.Location = new System.Drawing.Point(766, 481);
+            this.button_CreateTeacher.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_CreateTeacher.Name = "button_CreateTeacher";
-            this.button_CreateTeacher.Size = new System.Drawing.Size(112, 43);
+            this.button_CreateTeacher.Size = new System.Drawing.Size(84, 35);
             this.button_CreateTeacher.TabIndex = 0;
             this.button_CreateTeacher.Text = "New teacher";
             this.button_CreateTeacher.UseVisualStyleBackColor = true;
@@ -54,40 +55,44 @@
             // 
             // button_TeacherList
             // 
-            this.button_TeacherList.Location = new System.Drawing.Point(1138, 594);
-            this.button_TeacherList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_TeacherList.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.button_TeacherList.Location = new System.Drawing.Point(854, 483);
+            this.button_TeacherList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_TeacherList.Name = "button_TeacherList";
-            this.button_TeacherList.Size = new System.Drawing.Size(112, 41);
+            this.button_TeacherList.Size = new System.Drawing.Size(84, 33);
             this.button_TeacherList.TabIndex = 1;
-            this.button_TeacherList.Text = "Show existing teachers";
+            this.button_TeacherList.Text = "Show existing";
             this.button_TeacherList.UseVisualStyleBackColor = true;
             this.button_TeacherList.Click += new System.EventHandler(this.button_TeacherList_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(141, 34);
+            this.label1.Location = new System.Drawing.Point(106, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 16);
+            this.label1.Size = new System.Drawing.Size(0, 15);
             this.label1.TabIndex = 2;
             // 
             // dataGridViewSchedule
             // 
-            this.dataGridViewSchedule.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dataGridViewSchedule.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSchedule.Location = new System.Drawing.Point(15, 35);
+            this.dataGridViewSchedule.Location = new System.Drawing.Point(11, 28);
+            this.dataGridViewSchedule.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewSchedule.Name = "dataGridViewSchedule";
             this.dataGridViewSchedule.RowHeadersWidth = 51;
             this.dataGridViewSchedule.RowTemplate.Height = 24;
-            this.dataGridViewSchedule.Size = new System.Drawing.Size(1000, 600);
+            this.dataGridViewSchedule.Size = new System.Drawing.Size(750, 488);
             this.dataGridViewSchedule.TabIndex = 3;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button1.Location = new System.Drawing.Point(1021, 35);
+            this.button1.Location = new System.Drawing.Point(766, 28);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(229, 43);
+            this.button1.Size = new System.Drawing.Size(172, 35);
             this.button1.TabIndex = 4;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = false;
@@ -95,9 +100,11 @@
             // 
             // button_help
             // 
-            this.button_help.Location = new System.Drawing.Point(1021, 84);
+            this.button_help.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.button_help.Location = new System.Drawing.Point(766, 68);
+            this.button_help.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_help.Name = "button_help";
-            this.button_help.Size = new System.Drawing.Size(112, 43);
+            this.button_help.Size = new System.Drawing.Size(84, 35);
             this.button_help.TabIndex = 5;
             this.button_help.Text = "Help";
             this.button_help.UseVisualStyleBackColor = true;
@@ -105,9 +112,10 @@
             // 
             // button_ExportFolderSelect
             // 
-            this.button_ExportFolderSelect.Location = new System.Drawing.Point(1021, 133);
+            this.button_ExportFolderSelect.Location = new System.Drawing.Point(766, 108);
+            this.button_ExportFolderSelect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_ExportFolderSelect.Name = "button_ExportFolderSelect";
-            this.button_ExportFolderSelect.Size = new System.Drawing.Size(229, 43);
+            this.button_ExportFolderSelect.Size = new System.Drawing.Size(172, 35);
             this.button_ExportFolderSelect.TabIndex = 6;
             this.button_ExportFolderSelect.Text = "Select folder";
             this.button_ExportFolderSelect.UseVisualStyleBackColor = true;
@@ -115,9 +123,11 @@
             // 
             // button_saveFromGridView
             // 
-            this.button_saveFromGridView.Location = new System.Drawing.Point(1021, 182);
+            this.button_saveFromGridView.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.button_saveFromGridView.Location = new System.Drawing.Point(766, 148);
+            this.button_saveFromGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_saveFromGridView.Name = "button_saveFromGridView";
-            this.button_saveFromGridView.Size = new System.Drawing.Size(112, 43);
+            this.button_saveFromGridView.Size = new System.Drawing.Size(84, 35);
             this.button_saveFromGridView.TabIndex = 7;
             this.button_saveFromGridView.Text = "Save table";
             this.button_saveFromGridView.UseVisualStyleBackColor = true;
@@ -125,9 +135,11 @@
             // 
             // button_loadTableFromCSV
             // 
-            this.button_loadTableFromCSV.Location = new System.Drawing.Point(1138, 182);
+            this.button_loadTableFromCSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.button_loadTableFromCSV.Location = new System.Drawing.Point(854, 148);
+            this.button_loadTableFromCSV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_loadTableFromCSV.Name = "button_loadTableFromCSV";
-            this.button_loadTableFromCSV.Size = new System.Drawing.Size(112, 43);
+            this.button_loadTableFromCSV.Size = new System.Drawing.Size(84, 35);
             this.button_loadTableFromCSV.TabIndex = 8;
             this.button_loadTableFromCSV.Text = "Load table";
             this.button_loadTableFromCSV.UseVisualStyleBackColor = true;
@@ -135,9 +147,11 @@
             // 
             // button_rickroll
             // 
-            this.button_rickroll.Location = new System.Drawing.Point(1138, 84);
+            this.button_rickroll.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.button_rickroll.Location = new System.Drawing.Point(854, 68);
+            this.button_rickroll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button_rickroll.Name = "button_rickroll";
-            this.button_rickroll.Size = new System.Drawing.Size(112, 43);
+            this.button_rickroll.Size = new System.Drawing.Size(84, 35);
             this.button_rickroll.TabIndex = 9;
             this.button_rickroll.Text = "Video tutorial";
             this.button_rickroll.UseVisualStyleBackColor = true;
@@ -145,9 +159,10 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(946, 547);
             this.Controls.Add(this.button_rickroll);
             this.Controls.Add(this.button_loadTableFromCSV);
             this.Controls.Add(this.button_saveFromGridView);
@@ -158,9 +173,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_TeacherList);
             this.Controls.Add(this.button_CreateTeacher);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximumSize = new System.Drawing.Size(1280, 720);
-            this.MinimumSize = new System.Drawing.Size(1280, 720);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(964, 594);
+            this.MinimumSize = new System.Drawing.Size(964, 594);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();

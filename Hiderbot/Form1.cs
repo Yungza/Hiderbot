@@ -65,24 +65,10 @@ namespace Hiderbot
             Algorithm algorithm = new Algorithm();
             List<List<List<Period>>> weekSchedule = algorithm.GenerateWeek(TeachersList.teachersList, data.classes);
             List<List<Period>> schedule = algorithm.FindBestSchedule(TeachersList.teachersList, data.classes);
+            FunctionsCSV.SaveScheduleToCsv(weekSchedule, filePath);
+            FunctionsCSV.LoadCsvToDataGridView(dataGridViewSchedule, filePath);
 
-
-            algorithm.Print(weekSchedule, data.classes);
-           
-
-
-            /* try
-             {
-                 List<List<Period>> schedule = algorithm.FindBestSchedule(TeachersList.teachersList, data.classes);
-                 //algorithm.Print(schedule, data.classes);
-                 FunctionsCSV.SaveScheduleToCsv(schedule, filePath);
-                 FunctionsCSV.LoadCsvToDataGridView(dataGridViewSchedule, filePath);
-             }
-             catch (Exception)
-             {
-                 MessageBox.Show("Select export folder first");
-                 throw;
-             }*/
+            //algorithm.Print(weekSchedule, data.classes);
         }
 
         private void button_ExportFolderSelect_Click(object sender, EventArgs e)
@@ -104,6 +90,7 @@ namespace Hiderbot
         {
             MessageBox.Show("Welcome to HiderBot! Gymvod's best schedule generator" +
                 "\nPress start to start the algorithm" +
+                "\nEach row has the schedule for one day for a given class" +
                 "\nThe default schedule filepath is your documents folder" +
                 "\nThe programe always imports/exports using the file \"Schedule.csv\"" +
                 "\nGenerating a new schedule automatically overwrites the old one" +
@@ -139,20 +126,10 @@ Filip : coding and visionary
 
 Honza : coding 
 
+tobi : UI, display, csv
+
 Bára : ฅ^•ﻌ•^ฅ
 
 David : HiderBot™, pure sexappeal, mustache
-
-
-
-
-
-.
-.
-.
-
-tobi : 
-
-
 
 */
