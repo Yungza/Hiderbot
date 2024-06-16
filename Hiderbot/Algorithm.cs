@@ -231,9 +231,9 @@ namespace Hiderbot
         {
             Console.WriteLine(CalculateFitness(scheduleAll));
             Data data = new Data();
-            Teacher schovanek = new Teacher("Schovanek", new List<string> { "-" });
+            Teacher schovanek = new Teacher("Schovy", new List<string> { "Sbstn" });
             var teacherScheduleMap = new Dictionary<Teacher, HashSet<int>>();
-            Period blank = new Period(schovanek, "-");
+            Period blank = new Period(schovanek, "Sbstn");
             for (int i = 0; i < scheduleAll.Count; i++)
             {
                 for (int j = 0; j < scheduleAll[i].Count; j++)
