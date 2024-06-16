@@ -19,9 +19,9 @@ public class Data
         AddTeacher(new Teacher("Radzo", new List<string> { "English", "Geography" }));
         AddTeacher(new Teacher("Hobbs", new List<string> { "English", "German" }));
 
-        Class class1 = new Class("1.A", new Dictionary<string, int> { { "Math", 1 }, { "English", 1 }, { "Czech", 2 }, { "German", 2 }, { "Pee", 1 } });
-        Class class2 = new Class("1.B", new Dictionary<string, int> { { "Math", 2 }, { "English", 2 }, { "Czech", 2 }, { "Pee", 1 } });
-        Class class3 = new Class("1.C", new Dictionary<string, int> { { "Math", 1 }, { "English", 1 }, { "Czech", 1 }, { "German", 2 }, { "Pee", 1 }, { "Geography", 1 } });
+        Class class1 = new Class("1.A", new Dictionary<string, int> { { "Math", 6 }, { "English", 6 }, { "Czech", 6 }, { "German", 6 }, { "Pee", 6 } });
+        Class class2 = new Class("1.B", new Dictionary<string, int> { { "Math", 10 }, { "English", 12 }, { "Czech", 6 }, { "Pee", 2 } });
+        Class class3 = new Class("1.C", new Dictionary<string, int> { { "Math", 5 }, { "English", 5 }, { "Czech", 5 }, { "German", 5 }, { "Pee", 5 }, { "Geography", 5 } });
 
         classes.Add(class1);
         classes.Add(class2);

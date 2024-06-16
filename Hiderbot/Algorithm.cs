@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Messaging;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace Hiderbot
 {
-    //stolen from chat gpt(prompt: how to randomize a list?)
     public static class ListExtensions
     {
         public static Random rng = new Random();
@@ -25,11 +21,15 @@ namespace Hiderbot
                 list[n] = value;
             }
         }
+        public static List<T> GetRandomValues<T>(this IList<T> list, int numberOfValues)
+        {
+            Random random = new Random();
+            return list.OrderBy(x => random.Next()).Take(numberOfValues).ToList();
+        }
     }
+
     public class Algorithm
     {
-
-
         List<Teacher> teachers = new List<Teacher>();
         List<Class> classes = new List<Class>();
 
@@ -48,7 +48,6 @@ namespace Hiderbot
             {
                 List<string> subjects = new List<string>();
 
-               
                 foreach (var subject in c.Requirement)
                 {
                     string subjectName = subject.Key;
@@ -68,7 +67,6 @@ namespace Hiderbot
 
             var subjectTeacher = new Dictionary<string, List<Teacher>>();
 
-            
             foreach (var teacher in teachers)
             {
                 foreach (var subject in teacher.Subjects)
@@ -111,6 +109,7 @@ namespace Hiderbot
 
             return scheduleAll;
         }
+
         public int CalculateFitness(List<List<Period>> scheduleAll)
         {
             int fitness = 100;
@@ -142,6 +141,7 @@ namespace Hiderbot
 
             return fitness;
         }
+
         public List<List<Period>> FindBestSchedule(List<Teacher> teachers, List<Class> classes, int iterations = 1000)
         {
             List<List<Period>> bestSchedule = null;
@@ -158,28 +158,39 @@ namespace Hiderbot
                     bestSchedule = currentSchedule;
                 }
             }
-            if(bestFitness != 100)
+            if (bestFitness != 100)
             {
                 ThrowRandomBullshit(bestSchedule);
             }
             return bestSchedule;
         }
 
-
-
-        public void Print(List<List<Period>> scheduleAll, List<Class> classes)
+        public void Print(List<List<List<Period>>> weeklySchedule, List<Class> classes)
         {
-            for (int i = 0; i < scheduleAll.Count; i++)
-            {
-                Console.WriteLine($"Class {classes[i].ClassNumber}:");
-                foreach (var period in scheduleAll[i])
+            
+                for (int dayIndex = 0; dayIndex < weeklySchedule.Count; dayIndex++)
                 {
-                    Console.WriteLine($"  Teacher: {period.Teacher.Name}, Subject: {period.Subject}");
+                    Console.WriteLine($"Day {dayIndex + 1}:");
+
+                    List<List<Period>> daySchedule = weeklySchedule[dayIndex];
+
+                    for (int classIndex = 0; classIndex < daySchedule.Count && classIndex < classes.Count; classIndex++)
+                    {
+                        Class currentClass = classes[classIndex];
+                        List<Period> classSchedule = daySchedule[classIndex];
+
+                        Console.WriteLine($"  Class {currentClass.ClassNumber}:");
+
+                        foreach (var period in classSchedule)
+                        {
+                            Console.WriteLine($"    Teacher: {period.Teacher.Name}, Subject: {period.Subject}");
+                        }
+                    Console.WriteLine($"fitness: {CalculateFitness(weeklySchedule[classIndex])}");
+                    }
                 }
-            }
-            Console.WriteLine($" The fitness is: {CalculateFitness(scheduleAll)}");
+            
         }
-        public static List<List<string>> SplitDays(List<string> list)
+            public static List<List<Period>> SplitDays(List<Period> list)
         {
             // Initialize random number generator
             Random random = new Random();
@@ -189,12 +200,12 @@ namespace Hiderbot
             int extraItems = list.Count % 5;
 
             // Create a list to hold the 5 parts
-            List<List<string>> result = new List<List<string>>();
+            List<List<Period>> result = new List<List<Period>>();
 
             // Initialize the 5 parts
             for (int i = 0; i < 5; i++)
             {
-                result.Add(new List<string>());
+                result.Add(new List<Period>());
             }
 
             // Fill the parts with the base size
@@ -207,7 +218,6 @@ namespace Hiderbot
                 }
             }
 
-            
             for (int i = 0; i < extraItems; i++)
             {
                 int randomIndex = random.Next(5);
@@ -216,6 +226,7 @@ namespace Hiderbot
 
             return result;
         }
+
         public List<List<Period>> ThrowRandomBullshit(List<List<Period>> scheduleAll)
         {
             Console.WriteLine(CalculateFitness(scheduleAll));
@@ -239,7 +250,6 @@ namespace Hiderbot
                     if (teacherScheduleMap[teacher].Contains(j))
                     {
                         scheduleAll[i].Insert(j, blank);
-
                     }
                     else
                     {
@@ -251,6 +261,51 @@ namespace Hiderbot
             return scheduleAll;
         }
 
+
+
+        /*public void PrintAll(List<List<List<Period>>> scheduleAll) 
+        {
+            foreach(var a in  scheduleAll)
+            {
+                Console.WriteLine("day:");
+                foreach(var b in a)
+                {
+                    Console.WriteLine("class:");
+                    foreach(var c in b)
+                    {
+                        Console.WriteLine(c.Subject);
+                    }
+                }
+            }    
+        }
+        */
+
+        public List<List<List<Period>>> GenerateWeek(List<Teacher> teachers, List<Class> classes)
+        {
+            List<List<List<Period>>> weekSchedule = new List<List<List<Period>>>();
+            List<List<List<Period>>> schedule = new List<List<List<Period>>>();
+            List<List<Period>> week = FindBestSchedule(teachers, classes);
+            List<List<Period>> day = new List<List<Period>>();
+            
+            foreach (var a in week)
+            {
+                day = SplitDays(a);
+                schedule.Add(day);
+            }
+            for (int i = 0; i < schedule[0].Count; i++)
+            {
+                List<List<Period>> set = new List<List<Period>>();
+                set.Add(schedule[0][i]);
+                set.Add(schedule[1][i]);
+                set.Add(schedule[2][i]);
+                weekSchedule.Add(set);
+            }
+            
+
+            Console.WriteLine(schedule.Count);
+            return weekSchedule;
+             
+        }
 
     }
 }

@@ -16,7 +16,7 @@ namespace Hiderbot
 {
     public partial class Form1 : Form
     {
-        List <Teacher> teachers = new List <Teacher> ();
+        List<Teacher> teachers = new List<Teacher>();
         string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Schedule.csv"); //stackoverflow for path
         public Form1()
         {
@@ -28,7 +28,7 @@ namespace Hiderbot
             algorithm.Print(schedule, data.classes);
             FunctionsCSV.LoadCsvToDataGridView(dataGridViewSchedule, @"C:\Users\tobia\Documents\GitHub\Hiderbot\Hiderbot\Schedule.CSV");*/
         }
-        
+
         private void button_CreateTeacher_Click(object sender, EventArgs e)
         {
             NewTeacher newTeacher = new NewTeacher();
@@ -49,7 +49,7 @@ namespace Hiderbot
                     }
                 }
                 list += "\n";
-                
+
             }
             MessageBox.Show(list);
         }
@@ -63,19 +63,26 @@ namespace Hiderbot
         {
             Data data = new Data();
             Algorithm algorithm = new Algorithm();
-            
-            try
-            {
-                List<List<Period>> schedule = algorithm.FindBestSchedule(TeachersList.teachersList, data.classes);
-                //algorithm.Print(schedule, data.classes);
-                FunctionsCSV.SaveScheduleToCsv(schedule, filePath);
-                FunctionsCSV.LoadCsvToDataGridView(dataGridViewSchedule, filePath);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Select export folder first");
-                throw;
-            }
+            List<List<List<Period>>> weekSchedule = algorithm.GenerateWeek(TeachersList.teachersList, data.classes);
+            List<List<Period>> schedule = algorithm.FindBestSchedule(TeachersList.teachersList, data.classes);
+
+
+            algorithm.Print(weekSchedule, data.classes);
+           
+
+
+            /* try
+             {
+                 List<List<Period>> schedule = algorithm.FindBestSchedule(TeachersList.teachersList, data.classes);
+                 //algorithm.Print(schedule, data.classes);
+                 FunctionsCSV.SaveScheduleToCsv(schedule, filePath);
+                 FunctionsCSV.LoadCsvToDataGridView(dataGridViewSchedule, filePath);
+             }
+             catch (Exception)
+             {
+                 MessageBox.Show("Select export folder first");
+                 throw;
+             }*/
         }
 
         private void button_ExportFolderSelect_Click(object sender, EventArgs e)
@@ -111,7 +118,7 @@ namespace Hiderbot
 
         private void button_loadTableFromCSV_Click(object sender, EventArgs e)
         {
-            FunctionsCSV.LoadCsvToDataGridView(dataGridViewSchedule,filePath);
+            FunctionsCSV.LoadCsvToDataGridView(dataGridViewSchedule, filePath);
         }
 
         private void button_rickroll_Click(object sender, EventArgs e)
